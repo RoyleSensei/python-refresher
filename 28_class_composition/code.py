@@ -46,3 +46,20 @@ book = Book("Harry Potter")
 book2 = Book("Python 101")
 shelf = BookShelf(book, book2)
 print(shelf)
+
+
+class BookShelf:
+    def __init__(self, *books):
+        self.books = books
+
+    def __str__(self):
+        return f"BookShelf with {len(*self.books)} books."
+
+books = ["Harry Potter","Python 101","Lion King","Kill Bill", "Long Live"]
+shelf = BookShelf(books)
+print(shelf)
+
+
+
+
+
